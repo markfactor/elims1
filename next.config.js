@@ -8,8 +8,8 @@ const nextConfig = {
         unoptimized: true,
     },
     env: {
-        APP_URL: "http://localhost:3000/",
-        APP_SERVER: "http://localhost:3001/"
+        APP_URL: "https://elims1.vercel.app/",
+        APP_SERVER: "https://elims1.vercel.app/"
     }
 }
 
