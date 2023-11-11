@@ -9,7 +9,7 @@ const nextConfig = {
     },
     env: {
         APP_URL: "https://elims1.vercel.app/",
-        APP_SERVER: "https://elims1.vercel.app/"
+        APP_SERVER: "https://elims1.vercel.app:3001"
     }
 }
 
