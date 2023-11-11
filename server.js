@@ -1,12 +1,15 @@
 
-const { PrismaClient } = require('@prisma/client')
+const { PrismaClient } = require('.prisma/client/index')
 
 const prisma = new PrismaClient()
+
 
 
 const express = require("express");
 
 const { response } = require("express");
+
+
 
 const app = express()
 
