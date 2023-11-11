@@ -15,12 +15,12 @@ export default function Layout({children}) {
 
     const [list, setList] = useState([])
     
-    useEffect(()=> {
+    /*useEffect(()=> {
         axios.get(process.env.APP_SERVER + "getItems")
         .then((response,error) => {
             console.log(response.data)
         })
-    })
+    }) */
 
 
     return(
