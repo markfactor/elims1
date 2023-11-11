@@ -28,5 +28,3 @@ app.get("/getItems", async(req, res) => {
 app.listen(3001, ()=> {
     console.log("running server")
 })
-
-
