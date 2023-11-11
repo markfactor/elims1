@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 import '@/app/globals.css'
-//import axios from 'axios';
+import axios from 'axios';
 
 import Image from 'next/image';
 import { useEffect } from 'react';
@@ -15,12 +15,15 @@ export default function Layout({children}) {
 
     const [list, setList] = useState([])
     
-    /*useEffect(()=> {
-        axios.get(process.env.APP_SERVER + "getItems")
-        .then((response,error) => {
-            console.log(response.data)
-        })
-    }) */
+    useEffect(()=> {
+       const getData = async() => {
+            axios.get(process.env.APP_SERVER + "getItems")
+            .then((response,error) => {
+                console.log(response.data)
+            })
+       }
+       getData();
+    },[])
 
 
     return(
