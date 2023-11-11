@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model accounts {
+  acc_id          Int     @id @default(autoincrement())
+  acc_last_name   String  @db.VarChar
+  acc_first_name  String  @db.VarChar
+  acc_middle_name String? @db.VarChar
+  acc_address     String? @db.VarChar
+  acc_contact     String? @db.VarChar
+  acc_sex         String  @db.VarChar
+  acc_year_level  Int
+  acc_regular     Boolean @default(true)
+  acc_std_id      String
+  acc_email       String
+  acc_keycode     String
+}
+
+model author {
+  auth_id        Int     @id @default(autoincrement())
+  auth_lastname  String
+  auth_firstname String
+  auth_image     String?
+}
+
+model printed {
+  pr_id                Int     @id @default(autoincrement())
+  pr_title             String
+  pr_author            Json    @db.Json
+  pr_isbn              String?
+  pr_year_published    String?
+  pr_publisher         String?
+  pr_quantity          Int
+  pr_status            String  @default("OK")
+  pr_pages             Int?
+  pr_call_number       String?
+  pr_publication_place String?
+  pr_tracings          String?
+  pr_volume            String?
+  pr_donation          Json?
+  pr_price             String?
+}
