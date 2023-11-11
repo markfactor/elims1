@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 import '@/app/globals.css'
-import axios from 'axios';
+//import axios from 'axios';
 
 import Image from 'next/image';
 import { useEffect } from 'react';
