@@ -15,15 +15,7 @@ export default function Layout({children}) {
 
     const [list, setList] = useState([])
     
-    useEffect(()=> {
-       const getData = async() => {
-            axios.get(process.env.APP_SERVER + "getItems")
-            .then((response,error) => {
-                console.log(response.data)
-            })
-       }
-       getData();
-    },[])
+   
 
 
     return(
