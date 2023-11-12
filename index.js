@@ -2,15 +2,7 @@
 const { PrismaClient } = require('.prisma/client/index')
 
 const prisma = new PrismaClient()
-
-
-
 const express = require("express");
-
-const { response } = require("express");
-
-
-
 const app = express()
 
 app.get("/getItems", async(req, res) => {
@@ -23,7 +15,6 @@ app.get("/getItems", async(req, res) => {
     }
     
 })
-
 
 app.listen(3001, ()=> {
     console.log("running server")
