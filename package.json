@@ -11,7 +11,7 @@
     "serve": "node index.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d out",
-    "postinstall": "prisma generate"
+    "postinstall": "npx prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^5.5.2",
